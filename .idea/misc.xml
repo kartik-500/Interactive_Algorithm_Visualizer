@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable-v24/card_fill_round.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable-v24/card_round.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable-v24/ic_education.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/background_round_bottom.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic__.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_back.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_education.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_group_1.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_menu.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_onboard1.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_onboard2.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_onboard3.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_onboard4.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_onboardbottom.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_play.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_reading_book.xml" value="0.3609375" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_splash_screen.xml" value="0.2046875" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/purple_card_fill_round.xml" value="0.6259765625" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_binary_search.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_main.xml" value="0.2562326869806094" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_search.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_selected_item.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_sidebar.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_sorting.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_home.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_text.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/home_item.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/item_option.xml" value="2.3642857142857143" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/menu_left_drawer.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/purple_card_fill_round.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/submenu_item.xml" value="1.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

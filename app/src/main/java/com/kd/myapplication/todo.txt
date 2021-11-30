@@ -1,0 +1,11 @@
+
+
+# Things want to be added in Future :-
+    1) Avg. Time Complexity in SelectedItemActivity
+    2) Best, Avg, Worst case Complexities in MainCourse
+    3) Flow Chart, PseudoCode, Code Function of Each Algo
+    4) Comparing two algo side by side
+    5) Test on Large Dataset show time only of algos
+    6) Remove Folding in SelectedItemActivity
+    7) Screenshots of Steps ( Done and Commented in Searching )
+    8) Add Formula Tab or try to integrate it with the activity

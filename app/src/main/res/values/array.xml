@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Favourites</item>
+        <item />
+        <item>Rate Us</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_profile</item>
+        <item>@drawable/ic_favourites</item>
+        <item>0</item>
+        <item>@drawable/ic_rate</item>
+    </array>
+
+</resources>
