@@ -7,8 +7,10 @@
     <string name="linear_search_definition">Linear search or sequential search is a method for finding an element within a list. It sequentially checks each element of the list until a match is found or the whole list has been searched.</string>
     <string name="binary_search_definition">binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array.</string>
     <string name="bubble_sort_definition">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order</string>
+    <string name="improved_bubble_sort_definition">A better version of bubble sort, known as modified bubble sort, includes a flag that is set if an exchange is made after an entire pass over the array. If no exchange is made, then it should be clear that the array is already in order because no two elements need to be switched. In that case, the sort should end.</string>
+    <string name="insertion_sort_definition">Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.</string>
+    <string name="selection_sort_definition">The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.</string>
     <string name="interactive_algorithm_visualizer_app">Interactive Algorithm Visualizer</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="greetings">Hello,</string>
     <string name="enter_your_input">Enter Your Input</string>
@@ -18,9 +20,8 @@
     <string name="number_1">1</string>
     <string name="searching">Searching</string>
     <string name="name">Kartik</string>
-    <string name="enter_input_string">Please Enter an Example to Solve.\nOtherwise Click on Generate Random</string>
+    <string name="enter_input_string">Please Enter an Example to Solve.\n</string>
     <string name="hardcoded">1,2,3,4,5,6,7</string>
-    <string name="generate_random_btn">Generate Random</string>
     <string name="done_btn">Done</string>
 
 </resources>

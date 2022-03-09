@@ -3,7 +3,6 @@ package com.kd.myapplication.Activities.MainCourse.Searching;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
@@ -20,13 +19,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.hanks.htextview.HTextView;
 import com.hanks.htextview.HTextViewType;
 import com.kd.myapplication.R;
-
 import java.util.ArrayList;
-
 import co.ankurg.expressview.ExpressView;
 import co.ankurg.expressview.OnCheckListener;
 
@@ -224,7 +220,6 @@ public class SearchingActivity extends AppCompatActivity {
         backBtn.setOnClickListener(v -> onBackPressed());
 
     }
-
 
     public void createDynamicTextView() {
 

@@ -1,7 +1,6 @@
 package com.kd.myapplication.Activities.MainCourse.Sorting;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
@@ -17,11 +16,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.hanks.htextview.HTextView;
 import com.hanks.htextview.HTextViewType;
 import com.kd.myapplication.R;
-
 import java.util.ArrayList;
 
 public class SortingActivity extends AppCompatActivity {
@@ -35,7 +32,7 @@ public class SortingActivity extends AppCompatActivity {
     int[] ids;
     ArrayList<Boolean> previous_steps;
     String[] example;
-    String tag = "Selection Sort";
+    String tag;
     Integer[] arr;
     int i, j, key, swaps, min_idx;
     float width;
@@ -47,11 +44,10 @@ public class SortingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sorting);
 
-        bindViews();
+        example = getIntent().getStringExtra("input").split("[,]");
+        tag = getIntent().getStringExtra("tag");
 
-//        example = getIntent().getStringExtra("input").split("[,]");
-//        tag = getIntent().getStringExtra("tag");
-        example = new String[]{"24", "81", "11", "56", "10"};
+        bindViews();
 
         reset();
     }
@@ -75,10 +71,15 @@ public class SortingActivity extends AppCompatActivity {
 
         if (tag.toLowerCase().contains("improved bubble")) {
             toolbar_title.setText("Improved Bubble Sort");
+            definition.setText(getString(R.string.improved_bubble_sort_definition));
         } else if (tag.toLowerCase().contains("insertion sort")) {
             toolbar_title.setText("Insertion Sort");
+            definition.setText(getString(R.string.insertion_sort_definition));
         } else if (tag.toLowerCase().contains("selection sort")) {
             toolbar_title.setText("Selection Sort");
+            definition.setText(getString(R.string.selection_sort_definition));
+        } else {
+            definition.setText(getString(R.string.bubble_sort_definition));
         }
 
     }
@@ -198,7 +199,7 @@ public class SortingActivity extends AppCompatActivity {
                     if (i == 0 && j == 1) {
                         ids = new int[arr.length];
                         for (int i = 0; i < arr.length; i++) {
-                            ids[i] = i+1;
+                            ids[i] = i + 1;
                         }
                     }
 
@@ -229,11 +230,10 @@ public class SortingActivity extends AppCompatActivity {
                 }
             } else if (tag.toLowerCase().contains("selection")) {
                 if (!isAnimationPlaying) {
-                    Toast.makeText(SortingActivity.this, i+" "+j, Toast.LENGTH_SHORT).show();
                     if (i == 0 && j == 1) {
                         ids = new int[arr.length];
                         for (int i = 0; i < arr.length; i++) {
-                            ids[i] = i+1;
+                            ids[i] = i + 1;
                         }
                         min_idx = 0;
                     }
@@ -304,7 +304,6 @@ public class SortingActivity extends AppCompatActivity {
                     return;
                 }
             }
-            Toast.makeText(SortingActivity.this, "" + isSwapped, Toast.LENGTH_SHORT).show();
             if ((!isSwapped) && tag.toLowerCase().contains("improved bubble"))
                 break;
             isSwapped = false;
@@ -343,7 +342,6 @@ public class SortingActivity extends AppCompatActivity {
             if (j == arr.length - 1) {
                 i++;
                 j = 1;
-                Toast.makeText(SortingActivity.this, "" + isSwapped, Toast.LENGTH_SHORT).show();
 
                 if ((!isSwapped) && tag.toLowerCase().contains("improved bubble")) {
                     animatedText.setAnimateType(HTextViewType.RAINBOW);
@@ -587,6 +585,7 @@ public class SortingActivity extends AppCompatActivity {
             sortedElement.setPadding(0, 10, 0, 10);
             sortedElement.setBackgroundColor(Color.GRAY);
             sortedElement.setGravity(Gravity.CENTER);
+
         } else {
             ll.removeView(sortedElement);
         }
@@ -803,7 +802,7 @@ public class SortingActivity extends AppCompatActivity {
         animatedText.animateText("Sorted !");
         animatedText.setVisibility(View.VISIBLE);
 
-        new Handler(getMainLooper()).postDelayed(this::reset,2500);
+        new Handler(getMainLooper()).postDelayed(this::reset, 2500);
 
     }
 
@@ -816,28 +815,31 @@ public class SortingActivity extends AppCompatActivity {
         animatedText.animateText(arr[min_idx] + " < " + arr[j] + " (No Change in Minimum)");
         animatedText.setVisibility(View.VISIBLE);
 
-        new Handler(getMainLooper()).postDelayed(()->{
+        new Handler(getMainLooper()).postDelayed(() -> {
             tv.setBackgroundResource(R.color.purple_500);
             j++;
-            Toast.makeText(SortingActivity.this, ""+min_idx, Toast.LENGTH_SHORT).show();
             selectionSort();
-        },2500);
+        }, 2500);
 
     }
 
     private void swapMinimumElement() {
 
         if (min_idx == i) {
-            previous_step.add(new Integer[]{i,i});
+            previous_step.add(new Integer[]{i, i});
+
+            ss_showSortedElements();
+
             i++;
             j = i + 1;
             min_idx = i;
+
             if (isPlay) {
                 selectionSort();
             }
         } else {
 
-            previous_step.add(new Integer[]{min_idx,i});
+            previous_step.add(new Integer[]{min_idx, i});
 
             TextView tv1, tv2;
             tv1 = ll.findViewById(ids[i]);
@@ -879,14 +881,15 @@ public class SortingActivity extends AppCompatActivity {
                     int temp = arr[min_idx];
                     arr[min_idx] = arr[i];
                     arr[i] = temp;
-                    Log.d("TAG", "minidx: " + ids[min_idx] + " i: " + i+1);
+                    Log.d("TAG", "minidx: " + ids[min_idx] + " i: " + i + 1);
+
+                    ss_showSortedElements();
 
                     i++;
                     j = i + 1;
                     min_idx = i;
                     minimumTV.setVisibility(View.INVISIBLE);
                     isAnimationPlaying = false;
-
                     Log.d("TAG", "i: " + i + " j: " + j);
 
                     if (isPlay) {
@@ -898,11 +901,54 @@ public class SortingActivity extends AppCompatActivity {
 
     }
 
-    private void ss_goBackOneStep(){
+    private void ss_showSortedElements() {
 
-        int x,y;
-        x = previous_step.get(previous_step.size()-1)[0];
-        y = previous_step.get(previous_step.size()-1)[1];
+        if (sortedElement == null) {
+            sortedElement = new TextView(SortingActivity.this);
+            sortedElement.setHeight(5);
+            sortedElement.setPadding(0, 10, 0, 10);
+            sortedElement.setBackgroundColor(Color.GRAY);
+            sortedElement.setGravity(Gravity.CENTER);
+        } else {
+            ll.removeView(sortedElement);
+        }
+
+        if (sortedText == null) {
+            sortedText = new TextView(SortingActivity.this);
+            sortedText.setHeight(100);
+            sortedText.setText("Sorted");
+            sortedText.setPadding(0, 10, 0, 10);
+            sortedText.setTextColor(Color.GRAY);
+            sortedText.setGravity(Gravity.CENTER);
+            ll.addView(sortedText);
+        }
+
+
+        RelativeLayout.LayoutParams lprams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        sortedElement.setWidth((getResources().getDisplayMetrics().widthPixels - 40 - (10 * example.length)) * (i+1) / example.length);
+
+        lprams.setMargins(5, 150, 5, 25);
+
+        lprams.addRule(RelativeLayout.BELOW, 1);
+        sortedElement.setLayoutParams(lprams);
+        ll.addView(sortedElement); // Add to your ViewGroup using this method
+
+        RelativeLayout.LayoutParams lprams2 = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        sortedText.setWidth((getResources().getDisplayMetrics().widthPixels - 40 - (10 * example.length)) / example.length);
+        lprams2.setMargins(sortedElement.getWidth() / 2, 150, 5, 0);
+        lprams2.addRule(RelativeLayout.BELOW, 1);
+        sortedText.setLayoutParams(lprams2);
+    }
+
+    private void ss_goBackOneStep() {
+
+        int x, y;
+        x = previous_step.get(previous_step.size() - 1)[0];
+        y = previous_step.get(previous_step.size() - 1)[1];
 
         TextView tv1, tv2;
         tv1 = ll.findViewById(ids[y]);
@@ -952,7 +998,7 @@ public class SortingActivity extends AppCompatActivity {
                 minimumTV.setVisibility(View.INVISIBLE);
                 isAnimationPlaying = false;
 
-                previous_step.remove(previous_step.size()-1);
+                previous_step.remove(previous_step.size() - 1);
 
                 Log.d("TAG", "i: " + i + " j: " + j);
 
@@ -1019,12 +1065,11 @@ public class SortingActivity extends AppCompatActivity {
         animatedText.animateText(arr[min_idx] + " > " + arr[j] + " (Change Minimum)");
         animatedText.setVisibility(View.VISIBLE);
 
-        new Handler(getMainLooper()).postDelayed(()->{
+        new Handler(getMainLooper()).postDelayed(() -> {
             min_idx = j;
             j++;
             tv.setBackgroundResource(R.color.purple_500);
             selectionSort();
-        },2500);
+        }, 2500);
     }
-
 }

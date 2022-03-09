@@ -70,16 +70,14 @@
             android:weightSum="2">
 
             <TextView
-                android:id="@+id/generateRandom"
+                android:id="@+id/n"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/card_fill_round"
                 android:padding="10dp"
-                android:text="@string/generate_random_btn"
                 android:textColor="@color/purple_500"
                 android:textSize="14sp" />
 

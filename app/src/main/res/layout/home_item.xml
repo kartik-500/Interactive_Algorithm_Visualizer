@@ -2,11 +2,11 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="100dp"
     android:layout_marginStart="10dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="16dp"
     android:layout_marginEnd="10dp"
-    android:layout_marginBottom="8dp"
+    android:layout_marginBottom="16dp"
     android:background="@drawable/purple_card_fill_round">
 
 
@@ -14,24 +14,24 @@
         android:id="@+id/index"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:gravity="center_vertical"
         android:letterSpacing="0.15"
         android:text="@string/number_1"
         android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_toEndOf="@id/index"
         android:gravity="center_vertical"
         android:letterSpacing="0.15"
         android:text="@string/searching"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:transitionName="text" />
 
 </RelativeLayout>

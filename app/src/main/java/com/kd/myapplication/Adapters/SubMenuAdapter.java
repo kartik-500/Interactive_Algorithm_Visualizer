@@ -86,13 +86,6 @@ public class SubMenuAdapter extends RecyclerView.Adapter<SubMenuAdapter.MyViewHo
             }
         });
 
-        holder.generateRandom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // pass intent
-            }
-        });
-
         holder.done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +93,7 @@ public class SubMenuAdapter extends RecyclerView.Adapter<SubMenuAdapter.MyViewHo
                 SelectedItemActivity activity = (SelectedItemActivity) context;
                 String title = activity.getIntent().getStringExtra("Title");
 
-                if (title.toLowerCase().contains("search")) {
+                if (title.toLowerCase().contains("searching")) {
                     Intent intent = new Intent(context, SearchingActivity.class);
                     intent.putExtra("input", holder.input.getText().toString());
                     intent.putExtra("tag", holder.title.getText().toString());
@@ -110,10 +103,13 @@ public class SubMenuAdapter extends RecyclerView.Adapter<SubMenuAdapter.MyViewHo
                     InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
                     if (imm.isActive())
                         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                } else if (title.toLowerCase().contains("sort")) {
+                } else if (title.toLowerCase().contains("sorting")) {
                     Intent intent = new Intent(context, SortingActivity.class);
                     intent.putExtra("input", holder.input.getText().toString());
                     intent.putExtra("tag", holder.title.getText().toString());
+
+                    Log.d("TAG", "onClick: "+holder.title.getText().toString().toLowerCase());
+
                     context.startActivity(intent);
                     holder.fc.fold(false);
                     isOpen = false;
@@ -125,16 +121,6 @@ public class SubMenuAdapter extends RecyclerView.Adapter<SubMenuAdapter.MyViewHo
             }
         });
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // pass intent
-//                Intent intent = new Intent(context, SelectedItemActivity.class);
-//                intent.putExtra("Title",homeData.getTitle());
-//                context.startActivity(intent);
-//            }
-//        });
-
     }
 
     @Override
@@ -144,7 +130,7 @@ public class SubMenuAdapter extends RecyclerView.Adapter<SubMenuAdapter.MyViewHo
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView title, index, done, generateRandom;
+        TextView title, index, done;
         FoldingCell fc;
         ImageView close;
         EditText input;
@@ -157,7 +143,6 @@ public class SubMenuAdapter extends RecyclerView.Adapter<SubMenuAdapter.MyViewHo
             close = itemView.findViewById(R.id.close);
             input = itemView.findViewById(R.id.input);
             done = itemView.findViewById(R.id.done);
-            generateRandom = itemView.findViewById(R.id.generateRandom);
         }
     }
 }

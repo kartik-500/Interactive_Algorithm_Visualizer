@@ -25,7 +25,7 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
 
         PaperOnboardingPage scr1 = new PaperOnboardingPage("having difficulty in understanding an Algorithm?",
                 "We will describe Algorithm's\n with help of Animations",
-                Color.parseColor("#49999C"), R.drawable.ic_onboard1, R.drawable.ic_onboardbottom);
+                Color.parseColor("#0DBCC2"), R.drawable.ic_onboard1, R.drawable.ic_onboardbottom);
 
         PaperOnboardingPage scr2 = new PaperOnboardingPage("Having an unsolved doubt in Mind?",
                 "Our app does take your example and show step-by-step solution to your problem",
@@ -37,7 +37,7 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
 
         PaperOnboardingPage scr4 = new PaperOnboardingPage("Congratulations!",
                 "You're ready to go\n\nSwipe right to get started\n\n>>>>>>>>>>>>",
-                Color.parseColor("#995EEE"), R.drawable.ic_onboard4, R.drawable.ic_onboardbottom);
+                Color.parseColor("#BA90F6"), R.drawable.ic_onboard4, R.drawable.ic_onboardbottom);
 
         ArrayList<PaperOnboardingPage> elements = new ArrayList<>();
         elements.add(scr1);

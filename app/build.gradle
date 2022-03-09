@@ -43,6 +43,8 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.4.0"
     implementation 'com.yarolegovich:sliding-root-nav:1.1.1'
     implementation "co.ankurg.expressview:expressview:0.0.3"
+    implementation 'de.blox.treeview:treeview:0.1.0'
+
 
     // Screen Flickering Android 10  (to be removed)
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
